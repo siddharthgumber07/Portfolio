@@ -600,6 +600,13 @@ span{
     color: var(--main-color);
 }
 
+#msg{
+    color: var(--main-color);
+    margin-left: 10px ;
+    font-size: 1.6rem;
+ 
+}
+
 
 
 @media (max-width:1200px){
