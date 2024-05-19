@@ -12,10 +12,10 @@
 }
 
 :root{
-    --bg-color: #081b29;
-    --second-bg-color: #112e42;
-    --text-color: #ededed;
-    --main-color: #00abf0;
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: white;
+    --main-color:#0ef;
 }
 
 html{
@@ -113,12 +113,10 @@ section{
     width: 32.8;
 }
 
-.home-content .text-animate h3{
+.home-content h3 span{
     font-size: 3.2rem;
     font-weight: 700;
-    color: transparent;
-    -webkit-text-stroke: .7px var(--main-color);
-
+    color: var(--main-color);
 }
 
 
@@ -231,6 +229,10 @@ section{
 
 .home-sci a:hover::before{
     width: 100%;
+}
+
+.home-img img{
+    width: 35vw;
 }
 
 .about{
@@ -477,6 +479,86 @@ span{
     width: 60%;
 }
 
+
+/* portfolio */
+.portfolio{
+    background: var(--bg-color);
+}
+
+.portfolio h2{
+    margin-bottom: 4rem;
+}
+
+.portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+
+.portfolio-container .portfolio-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.portfolio-box img{
+    width: 100%;
+    transition: 0.5s ease;
+
+}
+
+.portfolio-box:hover img{
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.1),var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: 0.5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer{
+    transform: translateY(0);
+}
+
+.portfolio-layer h4{
+    font-size: 3rem;
+}
+
+.portfolio-layer p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.portfolio-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.portfolio-layer a i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
 .contact{
     min-height: auto;
     padding: 7rem;
@@ -639,6 +721,11 @@ span{
     .footer{
         padding: 2rem 4%;
     }
+
+    .portfolio{
+        padding-bottom: 7rem;
+    }
+
 }
 
 @media (max-width:768px){
@@ -700,6 +787,14 @@ span{
         transition-delay: .25s;
 
     }
+    .portfolio h2{
+        margin-bottom: 3rem;
+    }
+
+    .portfolio-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 
@@ -721,6 +816,10 @@ span{
         width: 38px;
         height: 38px;
 
+    }
+
+    .portfolio-container{
+        grid-template-columns: 1fr;
     }
 } 
 
