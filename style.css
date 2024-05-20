@@ -368,7 +368,7 @@ span{
     font-size: 1.6rem;
     padding-top: .5rem;
 }
-
+/* 
 .skills{
     min-height: auto;
     padding-bottom: 7rem;
@@ -477,12 +477,12 @@ span{
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span{
     width: 60%;
-}
+} */
 
 
 /* portfolio */
 .portfolio{
-    background: var(--bg-color);
+    background: var(--second-bg-color);
 }
 
 .portfolio h2{
