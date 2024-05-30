@@ -859,4 +859,12 @@ span{
     
 }
 
+@media (max-height: 750px){
+    .textarea-field{
+        height: 100px;
+    }
+    
+}
+
+
 
